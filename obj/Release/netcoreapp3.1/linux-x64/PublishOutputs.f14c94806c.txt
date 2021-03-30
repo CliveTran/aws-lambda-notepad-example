@@ -1,8 +1,0 @@
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSLambda-Notepad.dll
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSLambda-Notepad.deps.json
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSLambda-Notepad.runtimeconfig.json
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSLambda-Notepad.pdb
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSSDK.Core.dll
-C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\publish\AWSSDK.DynamoDBv2.dll
