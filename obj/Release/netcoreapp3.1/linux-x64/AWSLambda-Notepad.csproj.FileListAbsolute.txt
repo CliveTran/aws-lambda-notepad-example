@@ -1,0 +1,17 @@
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.deps.json
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.runtimeconfig.json
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.runtimeconfig.dev.json
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.pdb
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Core.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSSDK.Core.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\bin\Release\netcoreapp3.1\linux-x64\AWSSDK.DynamoDBv2.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.csprojAssemblyReference.cache
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.AssemblyInfoInputs.cache
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.AssemblyInfo.cs
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.csproj.CoreCompileInputs.cache
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.csproj.CopyComplete
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.dll
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.pdb
+C:\Users\nhan.tran\Desktop\AWSLambda-Notepad\obj\Release\netcoreapp3.1\linux-x64\AWSLambda-Notepad.genruntimeconfig.cache
