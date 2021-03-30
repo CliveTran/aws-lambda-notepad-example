@@ -19,34 +19,34 @@ namespace AWSLambda_Notepad
             RegionEndpoint = RegionEndpoint.APSoutheast1
         });
 
-        /// <summary>
-        /// A simple function that takes a string and does a ToUpper
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public string FunctionHandler(string input, ILambdaContext context)
-        {
-            return input?.ToUpper();
-        }
+        public static string tableName { get; } = "notepadDb";
 
-        public async Task<PutItemResponse> CreateNotepad(Request request, ILambdaContext context)
+        public async Task<PutItemResponse> CreateNotepad(CreateRequest request, ILambdaContext context)
         {
             var response = await client.DescribeTableAsync(new DescribeTableRequest
             {
-                TableName = "notepadDb"
+                TableName = tableName
             });
 
             Console.WriteLine(response);
 
             var createItemRequest = new PutItemRequest
             {
-                TableName = "notepadDb",
+                TableName = tableName,
                 Item = new Dictionary<string, AttributeValue>
                 {
-                    { "Id", new AttributeValue {N = $"{request.Id}"} },
-                    {"Title", new AttributeValue {S = $"{request.Title}"} },
-                    {"Content", new AttributeValue {S = $"{request.Content}"} }
+                    { 
+                        "Id",
+                        new AttributeValue {N = $"{request.Id}"}
+                    },
+                    { 
+                        "Title", 
+                        new AttributeValue {S = $"{request.Title}"} 
+                    },
+                    { 
+                        "Content", 
+                        new AttributeValue {S = $"{request.Content}"} 
+                    }
                 }
             };
 
@@ -54,31 +54,39 @@ namespace AWSLambda_Notepad
             return createItemResponse;
         }
 
-        public async Task<Notepad> FetchNotepad(ILambdaContext context)
+        public async Task<Notepad> GetNotepad(GetRequest req, ILambdaContext context)
         {
-            var request = new QueryRequest
+            var request = new GetItemRequest
             {
-                TableName = "notepadDb",
-                KeyConditionExpression = "Id = :v_Id",
-                ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+                TableName = tableName,
+                Key = new Dictionary<string, AttributeValue>()
                 {
-                    {":v_Id", new AttributeValue {N = "1"} }
+                    {"Id", new AttributeValue {N = $"{req.Id}"} }
                 }
             };
 
-            var response = await client.QueryAsync(request);
-            Dictionary<string, AttributeValue> dictionary = response.Items[0];
+            var response = await client.GetItemAsync(request);
+            return ParseToNotepadObject(response.Item);
+        }
+
+        private Notepad ParseToNotepadObject(Dictionary<string, AttributeValue> attributeMap)
+        {
             return new Notepad
             {
-                Id = Convert.ToInt32(dictionary.GetValueOrDefault("Id").N),
-                Content = dictionary.GetValueOrDefault("Content").S,
-                Title = dictionary.GetValueOrDefault("Title").S
+                Id = int.Parse(attributeMap.GetValueOrDefault("Id").N),
+                Title = attributeMap.GetValueOrDefault("Title").S,
+                Content = attributeMap.GetValueOrDefault("Content").S
             };
         }
     }
 
-    public class Request : Notepad
+    public class CreateRequest : Notepad
     {
+    }
+
+    public class GetRequest
+    {
+        public int Id { get; set; }
     }
 
     public class Notepad
